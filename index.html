@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173b51"><link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon-192.png"><title>German Trainer</title><link rel="stylesheet" href="./style.css"></head>
+<body><header><div class="wrap"><h1>Deutsch Trainer</h1><p>Offline vocabulary practice · saved on this device</p></div></header>
+<main class="wrap">
+<section class="panel"><h2>Quiz</h2><div class="controls">
+<label>Direction <select id="direction"><option value="en-de">English → German</option><option value="de-en">German → English</option><option value="en-de-sentence">English sentence → German</option><option value="de-en-sentence">German sentence → English</option></select></label>
+<label>Questions <select id="length"><option>10</option><option selected>20</option><option>50</option><option>100</option><option>200</option></select></label>
+<button id="start" class="primary">Start quiz</button></div>
+<div id="quiz" class="quiz" hidden><div class="muted" id="counter"></div><div class="question" id="question"></div>
+<div class="controls"><button id="speak-question">🔊 Repeat question</button><button id="reveal" class="primary">Reveal answer ↵</button></div>
+<div id="answer-area" hidden><div class="answer" id="answer"></div><p id="examples" class="muted"></p><button id="speak-answer">🔊 Repeat answer</button><p class="muted">Rate your recall:</p>
+<div class="ratings"><button data-rating="h">H · Know</button><button data-rating="j">J · Okay</button><button data-rating="k">K · Poor</button><button data-rating="l">L · Unknown</button></div></div></div>
+<div id="quiz-status" class="muted">Choose a direction and start a quiz.</div>
+<div class="controls speech-settings"><label>Read aloud <select id="speech-mode"><option value="off">Off</option><option value="question">Question</option><option value="both">Question and answer</option></select></label>
+<label>Speed <input id="speech-rate" type="range" min="0.5" max="1.25" step="0.05" value="0.85"><span id="rate-label">0.85×</span></label>
+<label>German voice <select id="voice"><option value="">System default</option></select></label></div></section>
+<section class="panel"><h2>Import vocabulary &amp; backup</h2><p class="muted">810 Goethe A1 entries are included. Your reviews and edits stay in this browser's IndexedDB, not in SQLite.</p>
+<div class="controls"><label class="file-label">Import TSV <input type="file" id="import" accept=".tsv,.txt,text/plain"></label>
+<button id="export">Export progress &amp; vocabulary</button><label class="file-label">Restore backup <input type="file" id="restore" accept=".json,application/json"></label></div>
+<p id="import-status" class="muted"></p><p class="muted small">TSV import updates matching IDs and adds new IDs; it does not delete your reviews. Importing a backup replaces the browser database. Keep exported backups if you use several devices.</p></section>
+<section class="panel"><h2>Browse vocabulary <span id="total" class="muted small"></span></h2>
+<div class="controls"><input id="search" type="search" placeholder="Search German, English, phrases or notes…" aria-label="Search vocabulary">
+<button id="previous">← Previous 50</button><span id="page-label" class="muted"></span><button id="next">Next 50 →</button></div>
+<div class="table-scroll"><table><thead><tr>
+<th data-sort="id">ID</th><th data-sort="german">German</th><th data-sort="german_phrase">German phrase</th><th data-sort="english">English</th><th data-sort="english_phrase">English phrase</th><th data-sort="notes">Notes</th><th data-sort="date_added">Date added</th><th data-sort="last_review">Last reviewed</th><th data-sort="next_due">Next due</th></tr></thead><tbody id="vocab-body"></tbody></table></div>
+</section></main><script src="./app.js" defer></script></body></html>
