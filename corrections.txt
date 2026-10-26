@@ -1,0 +1,20 @@
+Confirmed straightforward spelling corrections (rank, kanji, old kana -> new kana, old romaji -> new romaji):
+(303, '大きい', 'おき', 'おおきい', 'oki', 'ookii')
+(304, '小さい', 'ちさい', 'ちいさい', 'chisai', 'chiisai')
+(301, '易しい', 'やさし', 'やさしい', 'yasashi', 'yasashii')
+(331, '美味しい', 'おいし', 'おいしい', 'oishi', 'oishii')
+(249, '黄色い', 'きいろ', 'きいろい', 'kiiro', 'kiiroi')
+(147, '一緒に', 'いっしょ][に', 'いっしょに', 'issho ni', 'issho ni')
+(777, '七', 'なんあ', 'なな', 'nana', 'nana')
+(321, '七', 'なんあ', 'なな', 'nana', 'nana')
+(356, '七つ', 'なんあつ', 'ななつ', 'nanatsu', 'nanatsu')
+(316, '三つ', 'みつ', 'みっつ', 'mitsu', 'mittsu')
+(267, '二', 'にち', 'に', 'nichi', 'ni')
+(370, '五つ', 'いつ]tす', 'いつつ', 'itsutsu', 'itsutsu')
+(502, '今夜', 'こにゃ', 'こんや', 'konya', 'konya')
+(325, '四つ', 'よつ', 'よっつ', 'yotsu', 'yottsu')
+(520, '明後日', 'みょうごにち]/あさって', 'あさって', 'myougonichi/asatte', 'asatte')
+(908, '毎年', 'まいとし]/[まいねん', 'まいとし', 'maitoshi/ mainen', 'maitoshi')
+(245, '金曜日', 'きにょうび', 'きんようび', 'kinyoubi', 'kinyoubi')
+
+Other source spellings are left unchanged pending review.
