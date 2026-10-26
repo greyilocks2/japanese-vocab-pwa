@@ -19,3 +19,9 @@ Upload all files to GitHub Pages, or serve locally via `python3 -m http.server 8
 ## Data
 
 Progress is stored per browser in IndexedDB. Export JSON backups regularly. On a different site origin, old progress is not automatically transferred; restore a backup.
+
+## Version 3
+- All/Clear word-type selection; End quiz early (completed ratings are saved).
+- Android Japanese speech test and available voice selection.
+- If speech is silent, check Android **Settings → Text-to-speech output**; select an engine with Japanese language/voice data installed, and test with the in-app button. Browser speech depends on the phone's installed TTS voices; this offline PWA does not bundle audio files.
+- Keep the same GitHub Pages URL to retain existing IndexedDB review history.

@@ -7,15 +7,15 @@
 <section class="panel"><h2>Quiz</h2><div class="controls">
 <label>Direction <select id="direction"><option value="en-ja">English → Japanese</option><option value="ja-en">Japanese → English</option><option value="kana">Kanji → Kana</option><option value="romaji">Japanese → Romaji</option><option value="sentence">Japanese example → English</option></select></label>
 <label>Questions <select id="length"><option>10</option><option selected>20</option><option>50</option><option>100</option><option>200</option></select></label>
-<button id="start" class="primary">Start quiz</button></div><div class="controls"><label>Maximum frequency rank <input id="rank-max" type="number" min="1" max="1000" value="1000" style="width:95px"></label><span class="muted small">1 = highest rank in your source list</span></div><div id="category-filters" class="controls" aria-label="Word types"></div>
-<div id="quiz" class="quiz" hidden><div class="muted" id="counter"></div><div class="question" id="question"></div>
+<button id="start" class="primary">Start quiz</button></div><div class="controls"><label>Maximum frequency rank <input id="rank-max" type="number" min="1" max="1000" value="1000" style="width:95px"></label><span class="muted small">1 = highest rank in your source list</span></div><div class="controls"><strong>Word categories</strong><button id="select-all" type="button">All</button><button id="select-clear" type="button">Clear</button></div><div id="category-filters" class="controls" aria-label="Word types"></div>
+<div id="quiz" class="quiz" hidden><div class="controls"><span class="muted" id="counter"></span><button id="end-quiz" type="button">End quiz early</button></div><div class="question" id="question"></div>
 <div class="controls"><button id="speak-question">🔊 Repeat question</button><button id="reveal" class="primary">Reveal answer ↵</button></div>
 <div id="answer-area" hidden><div class="answer" id="answer"></div><p id="examples" class="muted"></p><button id="speak-answer">🔊 Repeat answer</button><p class="muted">Rate your recall:</p>
 <div class="ratings"><button data-rating="h">H · Know</button><button data-rating="j">J · Okay</button><button data-rating="k">K · Poor</button><button data-rating="l">L · Unknown</button></div></div></div>
 <div id="quiz-status" class="muted">Choose a direction and start a quiz.</div>
 <div class="controls speech-settings"><label>Read aloud <select id="speech-mode"><option value="off">Off</option><option value="question">Question</option><option value="both">Question and answer</option></select></label>
 <label>Speed <input id="speech-rate" type="range" min="0.5" max="1.25" step="0.05" value="0.85"><span id="rate-label">0.85×</span></label>
-<label>Japanese voice <select id="voice"><option value="">System default</option></select></label></div></section>
+<label>Japanese voice <select id="voice"><option value="">System default</option></select></label><button id="test-japanese" type="button">🔊 Test Japanese</button></div><p id="speech-status" class="muted small" role="status"></p></section>
 <section class="panel"><h2>Import vocabulary &amp; backup</h2><p class="muted">1,000 Japanese vocabulary entries are included. Your reviews and edits stay in this browser's IndexedDB, not in SQLite.</p>
 <div class="controls"><label class="file-label">Import HTML <input type="file" id="import" accept=".htm,.html,text/html"></label>
 <button id="export">Export progress &amp; vocabulary</button><label class="file-label">Restore backup <input type="file" id="restore" accept=".json,application/json"></label></div>
